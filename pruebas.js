@@ -1,3 +1,83 @@
+
+// resultadoNoche = 0
+// let resultado = 0;
+// let habitacionBasica = 40;
+// let habitacionDoble = 50;
+// let habitacionFamiliar = 60;
+// let habitacionSuit = 90 ;
+// document.addEventListener('DOMContentLoaded', function() {
+
+// const validarPersonas = (personas) => {
+
+// let resultadoPersonas = prompt("ingrese el numero de personas");
+// resultadoPersonas = personas;
+// if (resultadoPersonas> 0 && resultadoPersonas<= 8){
+
+// return true;
+
+// }else if (resultadoPersonas <= 0 || resultadoPersonas== " ") {
+
+// return alert("ingrese un numero valido. max 8 personas por habitacion");
+
+// }
+// else {
+
+// alert("lo siento, numero de personas maximo por habitacion 8");
+
+// }
+// }
+
+// const numeroNoches = (noches) => {
+// let resultadoNoche = prompt("ingrese el numero de noches");
+// resultadoNoche  = noches;
+// if (resultadoNoche > 0){
+
+//     return true;
+ 
+// } else {
+// alert("ingrese numero valido")
+    
+// }
+// }
+
+// while(resultadoPersonas == true && resultadoNoche == true){
+// function tipoDeHabitacion(habitaciones){
+  
+//  let seleccionHabitacion = prompt('1-habitacion basica, 2-habitacion doble, 3-habitacion familiar, 4-habitacion suit');
+// seleccionHabitacion =habitaciones;
+// if(seleccionHabitacion == 1){
+
+//  resultado = personas * habitacionBasica * noches;
+
+// return  alert (`costo de habitacion basica: ${habitacionBasica}$, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total) `);
+
+// } else if (seleccionHabitacion == 2) {
+
+//      resultado = personas * habitacionDoble * noches;
+//     return alert(`Costo de habitacion Doble ${habitacionDoble}$, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total) `)
+
+// } else if (seleccionHabitacion == 3) {
+    
+//     resultado = personas * habitacionFamiliar * noches;
+//    return alert (`Costo habitacion Familiar ${habitacionFamiliar}, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total) `);
+
+// }else if (seleccionHabitacion== 4) {
+    
+//    resultado = personas * habitacionSuit * noches;
+// return  alert (`Costo habitacion Suit ${habitacionSuit}, para ${resultadoPersonas} personas,por ${resultadoNoche}: ${resultado}$ (precio total) }`);
+
+// } else  {
+//     return  alert("error, ingrese un numero valido");
+// }
+
+// };
+
+// numeroPersonas();
+// numeroNoches();
+// tipoDeHabitacion();
+
+// }
+// }, false);
 let resultado = 0;
 //costo de habitaciones
 const habitaciones = {
@@ -7,7 +87,6 @@ const habitaciones = {
     habitacionSuit: 90
 }
 document.addEventListener('DOMContentLoaded', function() {
-    alert("BIENVENIDO. ESTE ES UN SISTEMA DE RESERVACION DE CABAÑAS EN EL HOTEL LASKA. TE BRINDAREMOS UN PRESUPUESTO DEPENDIENDO DEL NUMERO DE PERSONAS, DE NOCHES Y QUE TIPO DE HABITACION DESEAS. (LOS PRECIOS SON EN DOLARES) (MAXIMO POR CABAÑA 8 PERSONAS) GRACIAS POR ELEGIRNOS!!!♣♦");
 function reserva() {
 
 let resultadoPersonas = prompt("ingrese el numero de personas"); //preguntar numero de personas 
@@ -70,3 +149,7 @@ return  alert (`Costo habitacion Suit ${habitaciones.habitacionSuit}, para ${res
 reserva();
 
 }, false);
+
+
+
+
