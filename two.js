@@ -1,11 +1,11 @@
 let resultado = 0;
 //costo de habitaciones
-const habitaciones = {
-    habitacionBasica: 40,
-    habitacionDoble: 50,
-    habitacionFamiliar: 60,
-    habitacionSuit: 90
-}
+const habitaciones = [
+    { habitacionBasica: 40,},
+    {habitacionDoble: 50,},
+    { habitacionFamiliar: 60,},
+    {habitacionSuit: 90},
+]
 document.addEventListener('DOMContentLoaded', function() {
     alert("BIENVENIDO. ESTE ES UN SISTEMA DE RESERVACION DE CABAÑAS EN EL HOTEL LASKA. TE BRINDAREMOS UN PRESUPUESTO DEPENDIENDO DEL NUMERO DE PERSONAS, DE NOCHES Y QUE TIPO DE HABITACION DESEAS. (LOS PRECIOS SON EN DOLARES) (MAXIMO POR CABAÑA 8 PERSONAS) GRACIAS POR ELEGIRNOS!!!♣♦");
 function reserva() {
@@ -31,36 +31,42 @@ if (resultadoNoche == resultadoNoche){
     return console.error();
 }
 //costo de habitaciones
-const habitaciones = {
-    habitacionBasica: 40,
-    habitacionDoble: 50,
-    habitacionFamiliar: 60,
-    habitacionSuit: 90
-}
-for (let tipoDeHabitacion in habitaciones) {
+const habitaciones = [
+    { "habitacionBasica": 40,
+      "habitacionDoble": 50,
+      "habitacionFamiliar": 60,
+      "habitacionSuit": 90
+    }
+]
+
+for (let habitacion of habitaciones) {
 //preguntar que tipo de habitacion
 let tipoDeHabitacion = prompt('1-habitacion basica (40$),  2-habitacion doble (50$),  3-habitacion familiar (60$), 4-habitacion suit (90$)');
 
 if( tipoDeHabitacion == 1){
 
- resultado = resultadoPersonas * habitaciones.habitacionBasica * resultadoNoche;
 
-return  alert (`costo de habitacion basica: ${habitaciones.habitacionBasica}$, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total) `);
+ resultado = resultadoPersonas * habitacion["habitacionBasica"] * resultadoNoche; 
+
+
+ return  alert (`costo de habitacion basica: ${habitacion["habitacionBasica"]}$, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total)`);
+
+
 
 } else if (tipoDeHabitacion == 2) {
 
-     resultado = resultadoPersonas *habitaciones.habitacionDoble * resultadoNoche;
-    return alert(`Costo de habitacion Doble ${habitaciones.habitacionDoble}$, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total) `)
+     resultado = resultadoPersonas * habitacion["habitacionDoble"] * resultadoNoche;
+    return alert(`Costo de habitacion Doble ${habitacion["habitacionDoble"]}$, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total) `)
 
 } else if (tipoDeHabitacion == 3) {
     
-    resultado = resultadoPersonas * habitaciones.habitacionFamiliar * resultadoNoche;
-   return alert (`Costo habitacion Familiar ${habitaciones.habitacionFamiliar}, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total) `);
+    resultado = resultadoPersonas * habitacion["habitacionFamiliar"] * resultadoNoche;
+   return alert (`Costo habitacion Familiar ${ habitacion["habitacionFamiliar"]}$, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total) `);
 
 }else if (tipoDeHabitacion == 4) {
     
-   resultado = resultadoPersonas * habitaciones.habitacionSuit  * resultadoNoche;
-return  alert (`Costo habitacion Suit ${habitaciones.habitacionSuit}, para ${resultadoPersonas} personas,por ${resultadoNoche}: ${resultado}$ (precio total) }`);
+   resultado = resultadoPersonas * habitacion["habitacionSuit"] * resultadoNoche;
+return  alert (`Costo habitacion Suit ${habitacion["habitacionSuit"]}$, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total) }`);
 
 } else  {
     return  alert("error, ingrese un numero valido");
@@ -68,5 +74,8 @@ return  alert (`Costo habitacion Suit ${habitaciones.habitacionSuit}, para ${res
 }
 }
 reserva();
+
+
+
 
 }, false);
