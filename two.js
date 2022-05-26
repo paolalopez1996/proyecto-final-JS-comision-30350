@@ -6,6 +6,8 @@ const habitaciones = [
     { habitacionFamiliar: 60,},
     {habitacionSuit: 90},
 ]
+const equipment = ['televisor','baño', 'wifi', 'paseos a caballo', 'skii', 'spa', 'desayunos'];
+
 document.addEventListener('DOMContentLoaded', function() {
     alert("BIENVENIDO. ESTE ES UN SISTEMA DE RESERVACION DE CABAÑAS EN EL HOTEL LASKA. TE BRINDAREMOS UN PRESUPUESTO DEPENDIENDO DEL NUMERO DE PERSONAS, DE NOCHES Y QUE TIPO DE HABITACION DESEAS. (LOS PRECIOS SON EN DOLARES) (MAXIMO POR CABAÑA 8 PERSONAS) GRACIAS POR ELEGIRNOS!!!♣♦");
 function reserva() {
@@ -44,15 +46,16 @@ for (let habitacion of habitaciones) {
 let tipoDeHabitacion = prompt('1-habitacion basica (40$),  2-habitacion doble (50$),  3-habitacion familiar (60$), 4-habitacion suit (90$)');
 
 if( tipoDeHabitacion == 1){
-
-
- resultado = resultadoPersonas * habitacion["habitacionBasica"] * resultadoNoche; 
-
-
- return  alert (`costo de habitacion basica: ${habitacion["habitacionBasica"]}$, para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total)`);
-
-
-
+const equipment = ['televisor','baño', 'wifi', 'paseos a caballo', 'skii', 'spa', 'desayunos'];
+equipment.forEach(function(equipment) {
+let resultadoBasica = equipment.slice(0,1,2,)  //EQUIPAMIENTO INCLUIDO
+resultado = resultadoPersonas * habitacion["habitacionBasica"] * resultadoNoche;  //CALCULO DE PRECIO
+//RESPUESTA total
+return  alert (`costo de habitacion basica: ${habitacion["habitacionBasica"]}$, 
+para ${resultadoPersonas} personas, por ${resultadoNoche} noches: ${resultado}$ (precio total).
+ \n INCLUYE: ${resultadoBasica}`);
+});
+ 
 } else if (tipoDeHabitacion == 2) {
 
      resultado = resultadoPersonas * habitacion["habitacionDoble"] * resultadoNoche;
