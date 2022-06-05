@@ -58,32 +58,40 @@
      <form action="" id="formulario" class="row d-flex">
        <h1 class="formulario__titulo">haz tu reserva</h1>
        <div class="row date">
-       <div class="col-xl-4 col-sm-6">
-         <label for="check-in">check in</label>
-       <input type="date" name="check-in" class="formulario__input" id="check-in" placeholder="from">
-      </div>
-      <div class="col-xl-4 col-sm-6">
-        <label for="check-out">check out</label>
-        <input type="date" name="date" class="formulario__input" id="check-out" placeholder="to" >
-      </div>
-    </div>
-    <div class="col-xl-4 col-sm-6">
-    <form action="">
-       <label for="invitados" class="formulario__label">guest</label>
-       <select id="invitados" name="invitados">
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5</option>
-         <option value="6">6</option>
-         <option value="7">7</option>
-         <option value="8">8</option>
-       </select>
-      </form>
-    </div>
-      <input type="submit" value="click" class="formulario__submit">
+          <div class="col-xl-4 col-sm-6">
+          <label for="check-in">escribe numero de noches</label>
+          <input type="number" name="check-in" class="formulario__input" id="check-in" placeholder="from">
+          </div>
+          <div class="col-xl-4 col-sm-6">
+            <select id="selectHabitacion" class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="basica">basica</option>
+              <option value="doble">doble</option>
+              <option value="familiar">familiar</option>
+              <option value="suit">suit</option>
+            </select>
+          </div>
+          <div class="col-xl-2 col-sm-3">
+            <form action="">
+               <label for="invitados" class="formulario__label">guest</label>
+               <select id="invitados" name="invitados">
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+                 <option value="6">6</option>
+                 <option value="7">7</option>
+                 <option value="8">8</option>
+               </select>
+              </form>
+            </div>
+            <div class="col-xl-2 col-sm-3">
+              <button type="submit" class="btn btn-info formulario__submit" value="click"  id="boton2">Info</button>
 
+            </div>
+            <!-- <input type="submit" value="click" class="formulario__submit" id="boton2"> -->
+      </div>
       <h3 id="respuesta"> </h3>
      </form>
     </div>
@@ -222,5 +230,5 @@
   </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script></body>
-  <script src="./two.js"></script>
+  <script src="./pruebas.js"></script>
   </html>

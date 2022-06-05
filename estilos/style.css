@@ -125,28 +125,26 @@ height: 60rem;
   align-content: center;
 }
 .date{
+  height: 20rem;
   background-color: palegoldenrod;
   justify-content: center;
   display: flex;
   align-content: center;
 }
-#check-in, #check-out{
-  text-align: center;
-  align-items: center;
-  justify-content: center;
- 
-}
-.formulario__input{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #00B4D8;
-}
+
 .formulario__titulo{
   text-align: center;
   margin-top: 0;
-}
-
+} 
+/* .formulario__submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #00B4D8;
+  padding: 8px;
+  margin-top: 50px;
+} */
 /*-------------------------------------------------*/
 #tituloprincipal{
   text-align: center;
