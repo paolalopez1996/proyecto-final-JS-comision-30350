@@ -34,50 +34,54 @@ li.className = 'listaEquipments'
         cambiar();
     }
 
+    
 /*EJECUTAR PROGRAMA*/  
 let boton2 = document.getElementById('boton2');
-boton2.addEventListener("click", ()=> {calcular()} )
+boton2.addEventListener("click", ()=> {calcular(),   calculardiasDiscount()} )
 
 function calcular (){
     let capturarPersonas = parseInt(document.getElementById('invitados').value);
     let capturarHabitacion = document.getElementById('selectHabitacion').value;
-    let timeStart = new Date(document.getElementById("timeStart").value);
-    let timeEnd = new Date(document.getElementById("timeEnd").value);
-    let diffTotal;
+    let diff = document.getElementById("daysDiscount").value 
     let operacion = [];
-
-    if (timeEnd > timeStart)   
-    { 
-        let  diff = timeEnd.getTime() - timeStart.getTime();
-        let diffTotal = Math.round(diff / (1000 * 60 * 60 * 24)); /*SACAR EL TOTAL REDONDEADO*/
-        /*LA VARIABLE diffTotal es la que estoy usando para multiplicar con el numero de personas y habitacion*/
-    
-    }else if (timeEnd != null && timeEnd < timeStart) {
+    function calculardiasDiscount() {
+        let timeStart = new Date(document.getElementById("timeStart").value);
+        let timeEnd = new Date(document.getElementById("timeEnd").value);
+        var actualDate = new Date();
+        if (timeEnd > timeStart)   
+        { 
+            let  diff = timeEnd.getTime() - timeStart.getTime();
+            document.getElementById("daysDiscount").value = Math.round(diff / (1000 * 60 * 60 * 24)); /*SACAR EL TOTAL REDONDEADO*/
+            /*LA VARIABLE diffTotal es la que estoy usando para multiplicar con el numero de personas y habitacion*/
         
-        alert("La fecha final de la promoción debe ser mayor a la fecha inicial");
+        }else if (timeEnd != null && timeEnd < timeStart) {
+            document.getElementById("daysDiscount").value = 0;
+            alert("La fecha final de la promoción debe ser mayor a la fecha inicial");
+        }
     }
+    calculardiasDiscount();
     habitaciones.forEach(habitacion => {
     if(capturarHabitacion == "basica"){
-    operacion =  capturarPersonas * diffTotal * habitacion["habitacionBasica"];
+    operacion =  capturarPersonas *  diff * habitacion["habitacionBasica"];
     let newEquipmentsBasica = equipments.slice(0,2)
-    alert(`costo de habitacion basica: ${habitacion["habitacionBasica"]}$ \n invitados: ${capturarPersonas} \n noches ${diffTotal} \n total ${operacion}$
+    alert(`costo de habitacion basica: ${habitacion["habitacionBasica"]}$ \n invitados: ${capturarPersonas} \n noches ${diff} \n total ${operacion}$
     \n incluye: ${newEquipmentsBasica} `)
     } 
     else if (capturarHabitacion == "doble"){
-        operacion =  capturarPersonas * diffTotal * habitacion["habitacionDoble"]; 
+        operacion =  capturarPersonas * diff  * habitacion["habitacionDoble"]; 
         let newEquipmentsDoble = equipments.slice(0,3)
-        alert(` Costo de habitacion Doble ${habitacion["habitacionDoble"]}$ \n invitados: ${capturarPersonas} \n noches ${diffTotal} \n total ${operacion}$
+        alert(` Costo de habitacion Doble ${habitacion["habitacionDoble"]}$ \n invitados: ${capturarPersonas} \n noches ${diff} \n total ${operacion}$
         \n incluye: ${newEquipmentsDoble} `)
     }
     else if (capturarHabitacion == "familiar"){
-        operacion =  capturarPersonas *  diffTotal* habitacion["habitacionFamiliar"]; 
+        operacion =  capturarPersonas *  diff * habitacion["habitacionFamiliar"]; 
         let newEquipmentsFamiliar = equipments.slice(0,4)
-        alert(`Costo habitacion Familiar ${ habitacion["habitacionFamiliar"]}$ \n invitados: ${capturarPersonas} \n noches ${diffTotal} \n total ${operacion}$
+        alert(`Costo habitacion Familiar ${ habitacion["habitacionFamiliar"]}$ \n invitados: ${capturarPersonas} \n noches ${diff} \n total ${operacion}$
         \n incluye: ${newEquipmentsFamiliar} `)
     } 
     else if (capturarHabitacion == "suit"){
-        operacion =  capturarPersonas * diffTotal * habitacion["habitacionSuit"];
-        alert(`Costo habitacion Suit ${habitacion["habitacionSuit"]}$ \n invitados: ${capturarPersonas} \n noches ${diffTotal} \n total ${operacion}$
+        operacion =  capturarPersonas * diff  * habitacion["habitacionSuit"];
+        alert(`Costo habitacion Suit ${habitacion["habitacionSuit"]}$ \n invitados: ${capturarPersonas} \n noches ${diff} \n total ${operacion}$
         \n incluye: ${equipments} `);
     }
 });
