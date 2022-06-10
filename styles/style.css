@@ -26,7 +26,7 @@ body{
   
 }
 .contenedornavbar{
-background-image: url(../imagenes/ark-shelter-shelters-for-hotel-bjornson-boysplaynice-38-min.jpg);
+background-image: url(../assets/imagenes/ark-shelter-shelters-for-hotel-bjornson-boysplaynice-38-min.jpg);
 background-repeat: no-repeat;
 height: 60rem;
 }
@@ -112,39 +112,38 @@ height: 60rem;
 }
 
 /*FORMULARIO!!!*/
-#reservacion{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  display: inline-block;
-}
-#invitados{
-  width: 200px;
-  justify-content: center;
-  align-content: center;
-}
-.date{
-  height: 20rem;
-  background-color: palegoldenrod;
-  justify-content: center;
-  display: flex;
-  align-content: center;
-}
+#formulario{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
 
+}
 .formulario__titulo{
   text-align: center;
-  margin-top: 0;
-} 
-/* .formulario__submit{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  height: 5rem;
+}
+.inputs{
+  width: 100%;
+  background-color: #CAF0F8;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  background-color: #00B4D8;
-  padding: 8px;
-  margin-top: 50px;
-} */
+  justify-content: center;
+  align-items: center;
+}
+.boton__formulario{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+.fechas{
+  width: 10px;
+  border: 5px solid salmon;
+}
 /*-------------------------------------------------*/
 #tituloprincipal{
   text-align: center;
@@ -243,7 +242,7 @@ width: 100%;
       height: 250px;
     }
     }
-
+/*FOOTER--------------------------------------------*/
  
     .footer{
       margin-top: 5rem;
@@ -254,7 +253,7 @@ width: 100%;
       justify-content: center;
       align-items: center;
       width: 100%;
-      background-image: url(../imagenes/footer.jpg);
+      background-image: url(../assets/imagenes/footer.jpg);
       font-family: 'Raleway', sans-serif;
       font-weight: 900;
       padding-top: 5rem;
@@ -326,7 +325,14 @@ width: 100%;
         }
       }
    
-
+/*-------------GALERIA-----------*/
+#titulo_galeria{
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
       .grid-item:hover{
         filter: opacity(0.9);
         transform: scale(1.04); 
