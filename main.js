@@ -15,20 +15,25 @@ const habitaciones = [
     }
 ]
  class habitacion{
-	constructor(fechaIni, fechaFin, dias, habitacion, invitados,precio) {
-		this.fechaIni = fechaIni
-		this.fechaFin = fechaFin
+	constructor(dias, habitacion, invitados, presupuesto, precio) {
 		this.dias = dias
 		this.habitacion = habitacion
 		this.invitado = invitados
+		this.presupuesto = presupuesto
 		this.precio = precio
+		
 	}
 }
 
-const prod1 = new habitacion("24/06/2022", "27/12/2022", 5, "basica",4, 40)
-const prod2 = new habitacion("24/07/2022", "29/11/2022", 5, "doble",4, 50)
-const prod3 = new habitacion("24/08/2022", "25/09/2022", 5, "familiar",4, 60)
-const prod4 = new habitacion("26/09/2022", "22/10/2022", 5, "suit" ,4, 90)
+// let prod1 = new habitacion( Date  , Date , 5, "basica",4, 40)
+// let prod2 = new habitacion(Date  , Date , 5, "doble",4, 50)
+// let prod3 = new habitacion(Date  , Date , 5, "familiar",4, 60)
+// let prod4 = new habitacion(Date  , Date , 5, "suit" ,4, 90)
+
+ let prod1 = new habitacion( 5, "basica",4, 405,40)
+ let prod2 = new habitacion( 5, "doble",4, 5025,50)
+ let prod3 = new habitacion( 5, "familiar",4, 660,60)
+let prod4 = new habitacion( 5, "suit" ,4, 90,90)
 let productos = [prod1, prod2, prod3, prod4];
 let equipments = [
 	"televisor",
@@ -41,10 +46,10 @@ let equipments = [
 	"refrigerador",
 	"electric kettle",
 ]
-// let productoStr =  JSON.stringify(productos);
-// console.log(productoStr)
-// localStorage.setItem('productos', productoStr)
-// console.log(JSON.parse(localStorage.getItem('productos')))
+ let productoStr =  JSON.stringify(productos);
+ console.log(productoStr)
+localStorage.setItem('productos', productoStr)
+ console.log(JSON.parse(localStorage.getItem('productos')))
 //JOSE NARDULLI:
 /*Declare una variable que tiene el valor de la diferencia de dias y tambien aproveche para deshabilitarla asi nadie
 podra escribir alli*/
@@ -120,10 +125,11 @@ regresa un valor solo cuando la fecha de inicio y la fecha final tienen un valor
 			} else if (document.getElementById("selectHabitacion").value === "Open this select menu") {
 				alert("tambien hay que meter un costo")
 			} else {
-				calcular()
+				calcular() 
+				
 			}
 		})
-	
+		
 		    function calcular() {
             let presupuesto = document.getElementById("respuesta")
 			let capturarPersonas = parseInt(document.getElementById("invitados").value)
@@ -131,14 +137,18 @@ regresa un valor solo cuando la fecha de inicio y la fecha final tienen un valor
 			let diff = document.getElementById("daysDiscount").value
 			let fechaIni = document.getElementById("timeStart")
 			let fechaFin = document.getElementById("timeEnd")
-			let operacion = []
+			let operacion = [];
+			
 			/*GUARDAR EN EL STORAGE*/
-			const productos = new habitacion(fechaIni , fechaFin, diff, capturarHabitacion, capturarPersonas)
-	        let stringStorage =  JSON.stringify(productos)
+			/*Guardando los datos en el LocalStorage*/
+			let  productos = new habitacion( diff, capturarHabitacion, capturarPersonas, presupuesto)
+			let stringStorage =  JSON.stringify(productos)
 			localStorage.setItem("productos", stringStorage)
 			let nuevoObjeto = JSON.parse( localStorage.getItem("productos"));
-		
+
+			
             //AQUI SACO EL PRESUPUESTO TOTAL.
+			
 				if (capturarHabitacion == "basica") {
 					operacion = capturarPersonas * diff * prod1.precio;
 					let newEquipmentsBasica = equipments.slice(0, 2)
@@ -159,7 +169,8 @@ regresa un valor solo cuando la fecha de inicio y la fecha final tienen un valor
 			
 			 
 		}
-		
+          
+
 	},
 	false
 )
