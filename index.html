@@ -36,7 +36,7 @@
                   <a class="nav-link" href="./paginas/gallery.html">gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Our rooms</a>
+                  <a class="nav-link" href="#">OUR ROOMS</a>
                 </li>
               </ul>
           </div>
@@ -89,18 +89,24 @@
               </select>
           <!-- </div> -->
            <div class="col-xl-2 col-sm-3  boton__formulario"> 
+            <!-- <a href="./paginas/reserva.html"><button onclick="validarDatos()" value="click" id="boton2" type="button" class="btn btn-success btn-sm">Search</button></a> -->
             <button type="submit" class="btn btn-info formulario__submit" value="click"   id="boton2">Info</button>
             </div> 
         </div>
             
         </div>
-      
-      <h3 id="respuesta"> </h3>
-     
+        <div class="resultado">
+        <h2>check in</h2>
+        <p id="check-in-r"></p> 
+        <h2>check out</h2>
+       <p id="check-out-r"></p>
+       <h2>resultado</h2>
+       <p id="respuesta"></p>
+       <button>book now</button>
+      </div>
       </form>
   </div>
 
-     <!-- <p id="datosguardados"></p> -->
     <p id="datos_guardados"></p>
   
 
@@ -235,9 +241,11 @@
       <p>Copyright © 2022 LaskaHotel. All rights reserved</p>
     </div>
   </footer>
+ 
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
   <script src="./main.js" ></script>
+  <script src="./reserva.js"></script>
 
   </html>

@@ -1,4 +1,21 @@
+	//creé un elemento li  y lo rellene con los elementos del array equipments.
+		//(aparece casi al finalizar la pagina)
+		// let roomEquipment = document.getElementById("roomEquipment")
+		// equipments.forEach((item) => {
+		// 	const li = document.createElement("li")
+		// 	li.textContent = item
+		// 	roomEquipment.append(li)
+		// 	li.className = "listaEquipments"
+		// })
 
+		//EVENTOS: boton click para obtener info del proyecto
+		// function cambiar() {
+		// 	document.getElementById("laskatitulo").innerHTML =
+		// 		"BIENVENIDO. ESTE ES UN SISTEMA DE RESERVACION DE CABAÑAS EN EL HOTEL LASKA. TE BRINDAREMOS UN PRESUPUESTO DEPENDIENDO DEL NUMERO DE PERSONAS, DE NOCHES Y QUE TIPO DE HABITACION DESEAS. GRACIAS POR ELEGIRNOS!"
+		// }
+		// document.getElementById("boton1").onclick = function () {
+		// 	cambiar()
+		// }
 // let resultado = 0;
 // let resultadoPersonas = [];
 // let resultadoNoche = [];

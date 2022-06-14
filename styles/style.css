@@ -112,6 +112,16 @@ height: 60rem;
 }
 
 /*FORMULARIO!!!*/
+.resultado{
+  font-family: 'Raleway', sans-serif;
+  background-color: palegreen;
+  height: 22rem;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+}
+
 #formulario{
 display: flex;
 flex-direction: row;
