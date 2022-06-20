@@ -5,6 +5,9 @@
   overflow-x: hidden;
   box-sizing: border-box; 
 }
+a{
+  text-decoration: none;
+}
 /*INTERACCION CON EL DOM*/
    /*ROOM EQUIPMENT*/
    .listaEquipments{
@@ -22,9 +25,10 @@
 body{
   color: grey;
   background-color: whitesmoke;
-  font-family: 'Oleo Script Swash Caps', cursive;  
+ 
   
 }
+
 .contenedornavbar{
 background-image: url(../assets/imagenes/ark-shelter-shelters-for-hotel-bjornson-boysplaynice-38-min.jpg);
 background-repeat: no-repeat;
@@ -112,16 +116,6 @@ height: 60rem;
 }
 
 /*FORMULARIO!!!*/
-.resultado{
-  font-family: 'Raleway', sans-serif;
-  background-color: palegreen;
-  height: 22rem;
-  width: 100%;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 800;
-}
-
 #formulario{
 display: flex;
 flex-direction: row;
@@ -144,12 +138,16 @@ flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.boton__formulario{
+ .boton__formulario{
+  font-size: 15px;
+  width: 200px;
   text-align: center;
   justify-content: center;
   align-items: center;
-
-}
+  display: block;
+  margin-left: 120px;
+  padding: 8px; 
+} 
 .fechas{
   width: 10px;
   border: 5px solid salmon;
@@ -334,7 +332,77 @@ width: 100%;
           padding-left: 9rem;
         }
       }
+   /*HTML SECUNDARIO CABAÑAS*/
+   .contenedornavbar_reserva{
+    background-image: url(../assets/imagenes/navreserve.jpg);
+    background-position: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30rem;
+    }
+   .cabañaspadre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    font-family: 'Raleway', sans-serif;
+   }
+   .hab{
+    margin-top: 12px;
+      margin-bottom: 8rem;
+      padding: 2rem;
+   }
+   .img-cabañas{
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+   }
+    .primera-fila, .segunda-fila{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+   } 
+   .boton-book{
+    color: white;
+   }
+   .resultado{
+    color: black;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 12px;
    
+  
+  }
+  .infocol{
+    color: purple;
+   
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(198, 191, 178);
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+  }
+
+   #respuesta{
+    font-family: 'Raleway', sans-serif;
+    margin: 20px;
+    width: 100%;
+    font-size: 50px;
+    color: green;
+    }
 /*-------------GALERIA-----------*/
 #titulo_galeria{
   text-align: center;

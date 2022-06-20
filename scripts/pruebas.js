@@ -19,6 +19,24 @@
 // let resultado = 0;
 // let resultadoPersonas = [];
 // let resultadoNoche = [];
+//////////////////////////////////////////////
+
+// class habitacion{
+// 	constructor(dias, habitacion, invitados, operacion, precio) {
+// 		this.dias = dias
+// 		this.habitacion = habitacion
+// 		this.invitado = invitados
+// 		this.operacion= operacion
+// 		this.precio = precio
+		
+// 	}
+// }
+//  let prod1 = new habitacion( 5, "basica",4, 405,40)
+//  let prod2 = new habitacion( 5, "doble",4, 5025,50)
+//  let prod3 = new habitacion( 5, "familiar",4, 660,60)
+//  let prod4 = new habitacion( 5, "suit" ,4, 90,90)
+// let productos = [prod1, prod2, prod3, prod4];.
+/////////////////////////////////////////////////////////////////////
 let operacion = [];
 //costo de habitaciones
 const habitaciones = [

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Oleo+Script+Swash+Caps&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/68f6372bfa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/reserva.js"></script>
+</head>
+<body>
+    <div class="contenedornavbar_reserva">
+        <header class="header">
+          <nav class="navbar navbar-expand-lg navbar-light bg-color sticky-top ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+              <img src="./assets/imagenes/bloqueslogooficial.png" class="logo" alt="">
+              </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./paginas/gallery.html">gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./reserva.html">OUR ROOMS</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </nav>
+      </header>
+    </div>
+    
+    <div class="resultado container-fluid">
+    <div class="row info">
+    <div class="col-12 infocol">
+    <h2>check in</h2>
+    <p id="check-in-datos" ></p> 
+    <h2>check out</h2>
+     <p id="check-out-datos" ></p>
+     <h2>dias</h2>
+     <p id="dias-datos"></p>
+     <h2>habitacion</h2>
+     <p id="hab-nombre"></p>
+     <p id="respuesta"></p>
+     <button id="continue-to-book"  class="btn btn-dark">CONTINUAR LA RESERVA</button>
+    </div>
+    </div>
+  
+      
+    </div>
+    
+<div class="cabañaspadre container-fluid">
+    <div class="hab-basica row primera-fila">
+    <div class="col-6 col-sm-6 hab">
+    <h1>HABITACION BASICA</h1>
+    <button onclick="selectCabaña(1)"  type="button" class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
+    <br>
+    <img src="./assets/imagenes/imgstandard.jpg" alt="" class="img-cabañas">
+     
+    </div>
+    <div class=" hab-doble col-6 col-sm-6 hab">
+        <h1>HABITACION DOBLE</h1>
+        <button onclick="selectCabaña(2)"  class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
+         <br>
+        <img src="./assets/imagenes/imgdoble.jpg" alt="" class="img-cabañas">
+    </div>
+    </div>
+    <div class="hab-familiar row segunda-fila">
+    <div class="col-6 col-sm-6 hab">
+    <h1>HABITACION FAMILIAR</h1>
+    <button onclick="selectCabaña(3)"  class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
+     <br>
+    <img src="./assets/imagenes/imgfamiliar.jpg" alt="" class="img-cabañas">
+    </div>
+    <div class=" hab-suit col-6 col-sm-6 hab">
+        <h1>HABITACION SUIT</h1>
+        <button onclick="selectCabaña(4)"  class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
+         <br>
+        <img src="./assets/imagenes/imgsuit.jpg" alt="" class="img-cabañas">
+        </div>
+
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

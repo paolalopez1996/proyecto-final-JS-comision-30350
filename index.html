@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Oleo+Script+Swash+Caps&family=Raleway:wght@200&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/68f6372bfa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-   
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./main.js" ></script>
+    <script src="./scripts/reserva.js"></script>
 </head>
 <body class="bg-image">
   <div class="contenedornavbar">
@@ -36,7 +38,7 @@
                   <a class="nav-link" href="./paginas/gallery.html">gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">OUR ROOMS</a>
+                  <a class="nav-link" href="./reserva.html">OUR ROOMS</a>
                 </li>
               </ul>
           </div>
@@ -48,7 +50,6 @@
           <div class="col-12" id="welcomeInfo">
             <h4>WELCOME TO</h4>
             <h1 class="titulo">LÁSKA HOTEL</h1>
-            <button type="submit" id="boton1">CLICK aqui para saber de que trata mi proyecto</button>
             <p id="laskatitulo"></p>
           </div>
         </div>
@@ -64,49 +65,32 @@
             <input type="date" id="timeStart" class="form-control fechas" >
             <label>Fecha fin</label>
             <input type="date" id="timeEnd" class="form-control fechas" >
-            <label>Días</label>
-            <input class="form-control" id="daysDiscount">  
+           <label for="daysDiscount">dias totales</label>
+            <input type="text" id="daysDiscount" class="form-control fechas" >
          
-          <!-- <div class="col-xl-4 col-sm-6 columna2"> -->
-            <label for="selectHabitacion">habitacion</label>
-            <select id="selectHabitacion" class="form-select" aria-label="Default select example">
+            <label for="invitados" class="formulario__label">guests</label>
+            <select class="form-select" id="invitados" name="invitados" aria-label="Default select example">
               <option selected>Open this select menu</option>
-              <option value="basica">basica</option>
-              <option value="doble">doble</option>
-              <option value="familiar">familiar</option>
-              <option value="suit">suit</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
             </select>
-                <label for="invitados" class="formulario__label">guests</label>
-                <select id="invitados" name="invitados">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-              </select>
-          <!-- </div> -->
-           <div class="col-xl-2 col-sm-3  boton__formulario"> 
-            <!-- <a href="./paginas/reserva.html"><button onclick="validarDatos()" value="click" id="boton2" type="button" class="btn btn-success btn-sm">Search</button></a> -->
-            <button type="submit" class="btn btn-info formulario__submit" value="click"   id="boton2">Info</button>
-            </div> 
+          
+            <div class="col-xl-2 col-sm-3  boton__formulario"> 
+            <a href=""><button class="btn btn-dark formulario__submit" value="click"   id="boton" >INFO</button></a>
+          </div> 
         </div>
             
         </div>
-        <div class="resultado">
-        <h2>check in</h2>
-        <p id="check-in-r"></p> 
-        <h2>check out</h2>
-       <p id="check-out-r"></p>
-       <h2>resultado</h2>
-       <p id="respuesta"></p>
-       <button>book now</button>
-      </div>
+        
       </form>
   </div>
-
+ 
     <p id="datos_guardados"></p>
   
 
@@ -241,11 +225,8 @@
       <p>Copyright © 2022 LaskaHotel. All rights reserved</p>
     </div>
   </footer>
- 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
-  <script src="./main.js" ></script>
-  <script src="./reserva.js"></script>
+ </body>
 
   </html>
