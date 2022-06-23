@@ -7,13 +7,14 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Oleo+Script+Swash+Caps&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
     <script src="https://kit.fontawesome.com/68f6372bfa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="./main.js" ></script>
     <script src="./scripts/reserva.js"></script>
+    <script src="./scripts/libreria.js"></script>
 </head>
 <body class="bg-image">
   <div class="contenedornavbar">
@@ -45,6 +46,7 @@
         </div>
       </nav>
   </header>
+  
       <div class="container welcome">
         <div class="row align-items-center">
           <div class="col-12" id="welcomeInfo">
@@ -59,15 +61,14 @@
   <div id="reservacion" class="container-fluid col-xl-12 col-sm-12">
     <h1 class="formulario__titulo"> make your reservation </h1>
      <form action="" id="formulario" >
-       <div class="row inputs">
+       <div class="row inputs" id="inputs">
           <div class="col-xl-4 col-sm-6">
-            <label>Fecha de inicio</label>
+            <label>Check-in</label>
             <input type="date" id="timeStart" class="form-control fechas" >
-            <label>Fecha fin</label>
+            <label>Check-Out</label>
             <input type="date" id="timeEnd" class="form-control fechas" >
-           <label for="daysDiscount">dias totales</label>
+           <label for="daysDiscount">Days</label>
             <input type="text" id="daysDiscount" class="form-control fechas" >
-         
             <label for="invitados" class="formulario__label">guests</label>
             <select class="form-select" id="invitados" name="invitados" aria-label="Default select example">
               <option selected>Open this select menu</option>
@@ -225,8 +226,10 @@
       <p>Copyright © 2022 LaskaHotel. All rights reserved</p>
     </div>
   </footer>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./main.js" ></script>
+</body>
 
   </html>

@@ -1,4 +1,24 @@
-	//creé un elemento li  y lo rellene con los elementos del array equipments.
+	
+    
+// window.onload=function(){
+// let nombre = document.getElementById("name");
+// let apellido = document.getElementById("last-name");
+// let address = document.getElementById("inputAddress")
+// let city = document.getElementById("inputCity")
+// let email = document.getElementById("email")
+// let phone = document.getElementById("phone")
+// let postal = document.getElementById("postal-code")
+// let state = document.getElementById("state")
+// let userName = document.getElementById("username")
+// let cardNumber = document.getElementById("card-number")
+// let mm = document.getElementById("mm")
+// let yy = document.getElementById("yy")
+// let expiration = document.getElementById("expiration")
+// const send = document.getElementById("send")
+// }
+
+    
+    //creé un elemento li  y lo rellene con los elementos del array equipments.
 		//(aparece casi al finalizar la pagina)
 		// let roomEquipment = document.getElementById("roomEquipment")
 		// equipments.forEach((item) => {

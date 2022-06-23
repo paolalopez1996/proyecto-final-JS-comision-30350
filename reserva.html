@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Oleo+Script+Swash+Caps&family=Raleway:wght@200&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/68f6372bfa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="./scripts/reserva.js"></script>
+    
+    <script src="./scripts/libreria.js "></script>
 </head>
 <body>
     <div class="contenedornavbar_reserva">
@@ -27,7 +31,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                      <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">About us</a>
@@ -36,7 +40,7 @@
                       <a class="nav-link" href="./paginas/gallery.html">gallery</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./reserva.html">OUR ROOMS</a>
+                      <a class="nav-link" href="./index.html">OUR ROOMS</a>
                     </li>
                   </ul>
               </div>
@@ -44,37 +48,42 @@
           </nav>
       </header>
     </div>
-    
-    <div class="resultado container-fluid">
+    <div class="anime">
+
+    </div>
+    <div class="resultado container">
     <div class="row info">
-    <div class="col-12 infocol">
-    <h2>check in</h2>
+        <div class="col-12 infocol">
+    <h2>Check in:</h2>
     <p id="check-in-datos" ></p> 
-    <h2>check out</h2>
-     <p id="check-out-datos" ></p>
-     <h2>dias</h2>
-     <p id="dias-datos"></p>
-     <h2>habitacion</h2>
-     <p id="hab-nombre"></p>
-     <p id="respuesta"></p>
-     <button id="continue-to-book"  class="btn btn-dark">CONTINUAR LA RESERVA</button>
+    <h2>Check out:</h2>
+    <p id="check-out-datos" ></p>
+    <h2>Days:</h2>
+    <p id="dias-datos"></p>
+    <h2>Your room:</h2>
+    <p id="hab-nombre"></p>
+    <p id="respuesta"></p>
+    <button id="botonBook" onclick="continuarReservacion()" type="button"  class="btn btn-success reservar"><a href="#validation">Continue to book</a></button> 
+       </div>
     </div>
+
     </div>
-  
-      
+
+    <div class="titulo-elige">
+      <h1>SELECT YOUR TREE HOUSE</h1>
+      <small>the price includes all the benefits of the main cottage including breakfast or half board in a restaurant, wellness and other ilimitaded offered services </small>
     </div>
-    
 <div class="cabañaspadre container-fluid">
     <div class="hab-basica row primera-fila">
     <div class="col-6 col-sm-6 hab">
-    <h1>HABITACION BASICA</h1>
+    <h1> STANDARD </h1>
     <button onclick="selectCabaña(1)"  type="button" class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
     <br>
     <img src="./assets/imagenes/imgstandard.jpg" alt="" class="img-cabañas">
      
     </div>
     <div class=" hab-doble col-6 col-sm-6 hab">
-        <h1>HABITACION DOBLE</h1>
+        <h1> DOUBLE</h1>
         <button onclick="selectCabaña(2)"  class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
          <br>
         <img src="./assets/imagenes/imgdoble.jpg" alt="" class="img-cabañas">
@@ -82,13 +91,13 @@
     </div>
     <div class="hab-familiar row segunda-fila">
     <div class="col-6 col-sm-6 hab">
-    <h1>HABITACION FAMILIAR</h1>
+    <h1> FAMILIAR</h1>
     <button onclick="selectCabaña(3)"  class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
      <br>
     <img src="./assets/imagenes/imgfamiliar.jpg" alt="" class="img-cabañas">
     </div>
     <div class=" hab-suit col-6 col-sm-6 hab">
-        <h1>HABITACION SUIT</h1>
+        <h1> SUIT</h1>
         <button onclick="selectCabaña(4)"  class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
          <br>
         <img src="./assets/imagenes/imgsuit.jpg" alt="" class="img-cabañas">
@@ -96,6 +105,106 @@
 
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<div class="container form_payment" id="payment">
+    <form class="row g-3 needs-validation" id="validation"  novalidate >
+      <div class="col-6">
+        <label for="name" class="form-label">First name</label>
+        <input type="text" class="form-control" id="name"   required>
+      </div>
+      <div class="col-6">
+        <label for="last-name" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="last-name" required>
+      </div>
+    </form>
+    <form class="row g-3">
+      <div class="col">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress"   required>
+      </div>
+      <div class="col">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity" required>
+      </div>
+    </form>
+    <form class="row g-3">
+      <div class="col">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="phone"   required>
+      </div>
+      <div class="col">
+        <label for="email">Email</label>
+        <input type="email" class="form-control form-control-sm" id="email" placeholder="" required> 
+        <small id="emailHelp" class="email-help form-text text-muted">This is the email we will send your confirmation to.</small>
+      </div>
+    </form>
+    <form class="row">
+      <div class="col">
+        <label for="postal-code">Postal Code</label>
+        <input type="number" class="form-control form-control-sm" id="postal-code">
+      </div>
+      <div class="col">
+        <label for="inputState" class="form-label">State</label>
+        <input type="text" class="form-control form-control-sm" id="state">
+      </div>
+    </form>
+      <div class="card_information">
+        <div class="col-6">
+        <h5 class="mb-4 payment-title">Payment information</h5>
+        <div class="form-row mb-2">
+          <div class="col lista-pagos">
+            <div>
+              <a class="nav-link" data-toggle="pill" href="#nav-tab-card">
+                <i class="fa fa-credit-card"></i> Credit Card</a>
+            </div>
+               <div>
+                <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
+                  <i class="fab fa-paypal"></i>Paypal</a>
+               </div>     
+                  <div>
+                    <a class="nav-link" data-toggle="pill" href="#nav-tab-bank">
+                      <i class="fa fa-university icon"></i>Bank Transfer</a>
+                  </div>
+            </div>
+        <div class="form-row mb-2">
+            <div class="col">
+                <label for="username">Full name (on the card)</label>
+                <input type="text" class="form-control form-control-sm" name="username" id="username" required> 
+            </div>
+        </div>
+        <div class="form-row mb-2">
+            <label for="cardNumber">Card number</label>
+            <div class="input-group">
+                <input type="text" class="form-control form-control-sm" name="cardNumber" id="card-number" required>
+            </div>
+        </div> 
+        <div class="form-group mb-2">
+            <label><span class="hidden-xs">Expiration</span> </label>
+            <div class="input-group">
+                <input type="number" class="form-control form-control-sm" id="mm" placeholder="MM" name="" required>
+                <input type="number" class="form-control form-control-sm" id="yy" placeholder="YY" name="" required>
+            </div>
+        </div>
+        <div class="form-group mb-2">
+            <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+            <input type="number" id="expiration" class="form-control form-control-sm" required="">
+        </div>
+      </div>
+      <div class="form-row  btn_confirm">
+        <div class="col-12">
+          <div class="botones-confirm"> 
+            <button class="btn btn-room  btn-info" id="send" type="submit" > Confirm booking</button>
+          </div>
+          <div class="botones-confirm">
+            <input class="btn btn-room btn-dark"  type="reset" value="Delete data">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./scripts/reserva.js"></script>
+
 </body>
 </html>
