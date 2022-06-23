@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>sistema de reservacion de cabañas</title>
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Oleo+Script+Swash+Caps&family=Raleway:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <link rel="stylesheet" href="./styles/style.css">
+    <!-- animate.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- estilos -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/68f6372bfa.js" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- scripts -->
     <script src="./scripts/reserva.js"></script>
     <script src="./scripts/libreria.js"></script>
 </head>
@@ -46,7 +53,6 @@
         </div>
       </nav>
   </header>
-  
       <div class="container welcome">
         <div class="row align-items-center">
           <div class="col-12" id="welcomeInfo">
@@ -57,98 +63,92 @@
         </div>
       </div>
   </div>
-
   <div id="reservacion" class="container-fluid col-xl-12 col-sm-12">
-    <h1 class="formulario__titulo"> make your reservation </h1>
-     <form action="" id="formulario" >
-       <div class="row inputs" id="inputs">
-          <div class="col-xl-4 col-sm-6">
-            <label>Check-in</label>
-            <input type="date" id="timeStart" class="form-control fechas" >
-            <label>Check-Out</label>
-            <input type="date" id="timeEnd" class="form-control fechas" >
-           <label for="daysDiscount">Days</label>
-            <input type="text" id="daysDiscount" class="form-control fechas" >
-            <label for="invitados" class="formulario__label">guests</label>
-            <select class="form-select" id="invitados" name="invitados" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-            </select>
-          
-            <div class="col-xl-2 col-sm-3  boton__formulario"> 
-            <a href=""><button class="btn btn-dark formulario__submit" value="click"   id="boton" >INFO</button></a>
-          </div> 
-        </div>
-            
-        </div>
-        
+      <h1 class="formulario__titulo"> make your reservation </h1>
+      <form action="" id="formulario" >
+          <div class="row inputs" id="inputs">
+            <div class="col-xl-4 col-sm-6">
+              <label>Check-in</label>
+              <input type="date" id="timeStart" class="form-control fechas" >
+              <label>Check-Out</label>
+              <input type="date" id="timeEnd" class="form-control fechas" >
+              <label for="daysDiscount">Days</label>
+              <input type="text" id="daysDiscount" class="form-control fechas" >
+              <label for="invitados" class="formulario__label">guests</label>
+                <select class="form-select" id="invitados" name="invitados" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+                  <div class="col-xl-2 col-sm-3  boton__formulario"> 
+                    <a href=""><button class="btn btn-dark formulario__submit" value="click"   id="boton" >INFO</button></a>
+                  </div> 
+            </div>    
+          </div>
       </form>
   </div>
- 
-    <p id="datos_guardados"></p>
-  
-
-      <div class="container-fluid textoprincipal">
-        <div class="row principalhijo">
-          <div class="col-sm-10 ">
-            <h2 id="tituloprincipal">LÁSKA</h2>
-            <p>Hotel Láska is one of the best known hotels in Finland. Located in Lapland, in the middle of the ski resort Fik. It is located near the slope and cable car, 
+    <!-- <p id="datos_guardados"></p> -->
+    <div class="container-fluid textoprincipal">
+      <div class="row principalhijo">
+        <div class="col-sm-10 ">
+          <h2 id="tituloprincipal">LÁSKA</h2>
+          <p>Hotel Láska is one of the best known hotels in Finland. Located in Lapland, in the middle of the ski resort Fik. It is located near the slope and cable car, 
               so you can get from the hotel to the entire resort Fik by skis.
               It is here that a unique accommodation complex was created right in the heart of Lapland.
               In the area you will find the possibility of accommodation in the original Láska hotel in the Villa, 
               and in the new cottages TREE HOUSES. 
-              The current accommodation capacity is a total of 216 beds, including extra beds.</p>
-          </div>
+              The current accommodation capacity is a total of 216 beds, including extra beds.
+          </p>
         </div>
       </div>
+    </div>
       <section class="container services">
-          <div class="row history">
-            <div class="col-lg-4 col-md-4 col-sm-6">
+        <div class="row history">
+          <div class="col-lg-4 col-md-4 col-sm-6">
             <i class="fa-solid fa-book-open fa-2x"></i>
             <h2>Rich History</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, maiores atque! Doloribus, exercitationem necessitatibus porro minus enim, sequi officiis obcaecati, aliquam placeat quibusdam sit ea est quia minima atque aperiam?</p>
-            </div>
+          </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
               <i class="fa-solid fa-people-group fa-2x"></i>
               <h2>Family friendly</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, maiores atque! Doloribus, exercitationem necessitatibus porro minus enim, sequi officiis obcaecati, aliquam placeat quibusdam sit ea est quia minima atque aperiam?</p>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <i class="fa-solid fa-wifi fa-2x"></i>
-              <h2>Free Wi-Fi</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, maiores atque! Doloribus, exercitationem necessitatibus porro minus enim, sequi officiis obcaecati, aliquam placeat quibusdam sit ea est quia minima atque aperiam?</p>
-            </div>
-          </div>
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <i class="fa-solid fa-wifi fa-2x"></i>
+                <h2>Free Wi-Fi</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, maiores atque! Doloribus, exercitationem necessitatibus porro minus enim, sequi officiis obcaecati, aliquam placeat quibusdam sit ea est quia minima atque aperiam?</p>
+              </div>
+        </div>
           <div class="row history">
               <div class="col-lg-4 col-md-4 col-sm-6">
                 <i class="fa-solid fa-dog fa-2x"></i>
                 <h2>Dog friendly</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, maiores atque! Doloribus, exercitationem necessitatibus porro minus enim, sequi officiis obcaecati, aliquam placeat quibusdam sit ea est quia minima atque aperiam?</p>
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-6">
-                <i class="fa-solid fa-person-skiing fa-2x"></i>
-                <h2>accommodation right on the slope</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, maiores atque! Doloribus, exercitationem necessitatibus porro minus enim, sequi officiis obcaecati, aliquam placeat quibusdam sit ea est quia minima atque aperiam?</p>
-              </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                  <i class="fa-solid fa-person-skiing fa-2x"></i>
+                  <h2>accommodation right on the slope</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, maiores atque! Doloribus, exercitationem necessitatibus porro minus enim, sequi officiis obcaecati, aliquam placeat quibusdam sit ea est quia minima atque aperiam?</p>
+                </div>
           </div>
       </section>
-            <section class="container-fluid containerrooms">
-              <div class="row room-fila">
-                <div class="col-lg-3 col-sm-6 col-md-6">
-                    <div class="room-image">
-                      <img src="./assets/imagenes/roomstandar.jpg" alt="standard">
-                    </div>
+          <section class="container-fluid containerrooms">
+            <div class="row room-fila">
+              <div class="col-lg-3 col-sm-6 col-md-6">
+                  <div class="room-image">
+                    <img src="./assets/imagenes/roomstandar.jpg" alt="standard">
+                  </div>
                     <div class="room-title">
                       <button type="button" class="btn btn-info"><a href="#">Book</a></button>
                     </div>
-                </div>
+              </div>
                 <div class="col-lg-3 col-sm-6 col-md-6">
                   <div class="room-image">
                     <img src="./assets/imagenes/roomdoble.jpg" alt="standard">
@@ -173,14 +173,13 @@
                       <button type="button" class="btn btn-info"><a href="#">Book</a></button>
                     </div>
                   </div>
-              </div>
-            </section>
+            </div>
+          </section>
             
             <!-- interactuando con DOM -->
-            <ul id="roomEquipment">
-              <h1 class="tituloEquipments">ROOM EQUIPMENTS</h1>
-
-            </ul>
+    <ul id="roomEquipment">
+        <h1 class="tituloEquipments">ROOM EQUIPMENTS</h1>
+    </ul>
   <footer class="container-fluid footer">
       <div class="row">
           <div class="col-lg-4 col-xs-12 aboutus">
@@ -226,10 +225,8 @@
       <p>Copyright © 2022 LaskaHotel. All rights reserved</p>
     </div>
   </footer>
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./main.js" ></script>
 </body>
-
-  </html>
+</html>

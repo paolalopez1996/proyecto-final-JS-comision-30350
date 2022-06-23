@@ -19,7 +19,7 @@ document.addEventListener(
 	//anime.js
 	anime({
 		targets: '.welcome',
-		width: '60%', // -> from '28px' to '100%',
+		width: '60%', 
 	   easing:'linear',
 	   direction: 'alternate',
 	   scale: 1,
@@ -54,6 +54,7 @@ document.addEventListener(
 		(timeEnd != null && timeEnd < timeStart) ? swal("UUPS!", "The check-out  must be a date that pass after check-in!", "error") :
 		console.log(timeStart, timeEnd) //ver fechas en consola
 		}
+		//validacion
 	    boton.addEventListener('click', (e) => {
 		e.preventDefault()
 		obtenerInvitados();

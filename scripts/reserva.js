@@ -33,6 +33,8 @@ let datosCheckOut = localStorage.getItem("checkout")
 document.getElementById("check-out-datos").innerHTML = datosCheckOut;
 let diasTotal = localStorage.getItem("dateTotal")
 document.getElementById("dias-datos").innerHTML = diasTotal;
+let guest = localStorage.getItem("invitados")
+document.getElementById("guests").innerHTML = guest;
 };
 
 // anime.js
@@ -47,6 +49,7 @@ anime({
 	loop: true
   });
 
+//saco el presupuesto total segun el tipo de cabaña
 function selectCabaña(id){
 let i = 0
 while(!(habitacion[i].id == id)){
@@ -57,6 +60,7 @@ document.getElementById("hab-nombre").innerText = habitacion[i].nombre
 
 };
 
+//aparece el formulario de pago una vez seleccionado el tipo de cabaña
 function continuarReservacion(){
 let i = 0
  if (document.getElementById("hab-nombre").innerText ==! habitacion[i].nombre){
@@ -72,23 +76,6 @@ let i = 0
 
 
 
-
-// window.onload=function(){
-// let nombre = document.getElementById("name");
-// let apellido = document.getElementById("last-name");
-// let address = document.getElementById("inputAddress")
-// let city = document.getElementById("inputCity")
-// let email = document.getElementById("email")
-// let phone = document.getElementById("phone")
-// let postal = document.getElementById("postal-code")
-// let state = document.getElementById("state")
-// let userName = document.getElementById("username")
-// let cardNumber = document.getElementById("card-number")
-// let mm = document.getElementById("mm")
-// let yy = document.getElementById("yy")
-// let expiration = document.getElementById("expiration")
-// const send = document.getElementById("send")
-// }
 
 
 
