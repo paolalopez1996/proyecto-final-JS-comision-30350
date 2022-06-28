@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- estilos -->
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="./scripts/libreria.js "></script>
+    
 </head>
 <body>
     <div class="contenedornavbar_reserva">
@@ -38,7 +38,7 @@
                       <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About us</a>
+                      <a class="nav-link" href="./paginas/about.html">About us</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="./paginas/gallery.html">gallery</a>
@@ -67,7 +67,7 @@
               <h2>Your room:</h2>
               <p id="hab-nombre"></p>
               <p id="respuesta"></p>
-              <button id="botonBook" onclick="continuarReservacion()" type="button"  class="btn btn-success reservar"><a href="#validation">Continue to book</a></button> 
+              <button id="botonBook" onclick="continuarReservacion()" type="button"  class="btn btn-success reservar"><a href="#form">Continue to book</a></button> 
             </div>
           </div>
         </div>
@@ -93,116 +93,102 @@
         </div>
         <div class="hab-familiar row segunda-fila">
           <div class="col-6 col-sm-6 hab">
-            <h1> FAMILIAR</h1>
+            <h1> FAMILY</h1>
             <button onclick="selectCabaña(3)"  class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
             <br>
             <img src="./assets/imagenes/imgfamiliar.jpg" alt="" class="img-cabañas">
             </div>
               <div class=" hab-suit col-6 col-sm-6 hab">
-                <h1> SUIT</h1>
+                <h1> BIG FAMILY</h1>
                 <button onclick="selectCabaña(4)"  class="btn btn-dark"><a href="#check-in-datos" class="boton-book">BOOK</a></button>
                 <br>
                 <img src="./assets/imagenes/imgsuit.jpg" alt="" class="img-cabañas">
               </div>
         </div>
       </div>
-    <div class="container form_payment" id="payment">
-        <form class="row g-3 needs-validation" id="validation"  novalidate >
-          <div class="col-6">
-            <label for="name" class="form-label">First name</label>
-            <input type="text" class="form-control" id="name"   required>
-          </div>
-            <div class="col-6">
-              <label for="last-name" class="form-label">Last Name</label>
-              <input type="text" class="form-control" id="last-name" required>
-            </div>
-        </form>
-        <form class="row g-3">
-          <div class="col">
-            <label for="inputAddress" class="form-label">Address</label>
-            <input type="text" class="form-control" id="inputAddress"   required>
-          </div>
-            <div class="col">
-              <label for="inputCity" class="form-label">City</label>
-              <input type="text" class="form-control" id="inputCity" required>
-            </div>
-        </form>
-        <form class="row g-3">
-          <div class="col">
-            <label for="phone" class="form-label">Phone</label>
-            <input type="text" class="form-control" id="phone"   required>
-          </div>
-            <div class="col">
-              <label for="email">Email</label>
-              <input type="email" class="form-control form-control-sm" id="email" placeholder="" required> 
-              <small id="emailHelp" class="email-help form-text text-muted">This is the email we will send your confirmation to.</small>
-            </div>
-        </form>
-        <form class="row">
-          <div class="col">
-            <label for="postal-code">Postal Code</label>
-            <input type="number" class="form-control form-control-sm" id="postal-code">
-          </div>
-            <div class="col">
-              <label for="inputState" class="form-label">State</label>
-              <input type="text" class="form-control form-control-sm" id="state">
-            </div>
-        </form>
-          <div class="card_information">
-            <div class="col-6">
-              <h5 class="mb-4 payment-title">Payment information</h5>
-                <div class="form-row mb-2">
-                    <div class="col lista-pagos">
-                      <div>
-                        <a class="nav-link" data-toggle="pill" href="#nav-tab-card">
-                        <i class="fa fa-credit-card"></i> Credit Card</a>
-                      </div>
-                      <div>
-                        <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
-                        <i class="fab fa-paypal"></i>Paypal</a>
-                      </div>     
-                        <div>
-                          <a class="nav-link" data-toggle="pill" href="#nav-tab-bank">
-                          <i class="fa fa-university icon"></i>Bank Transfer</a>
-                        </div>
-                    </div>
-                      <div class="form-row mb-2">
-                          <div class="col">
-                            <label for="username">Full name (on the card)</label>
-                            <input type="text" class="form-control form-control-sm" name="username" id="username" required> 
-                          </div>
-                      </div>
-                        <div class="form-row mb-2">
-                          <label for="cardNumber">Card number</label>
-                          <div class="input-group">
-                          <input type="text" class="form-control form-control-sm" name="cardNumber" id="card-number" required>
-                          </div>
-                        </div> 
-                          <div class="form-group mb-2">
-                            <label><span class="hidden-xs">Expiration</span> </label>
-                              <div class="input-group">
-                                <input type="number" class="form-control form-control-sm" id="mm" placeholder="MM" name="" required>
-                                <input type="number" class="form-control form-control-sm" id="yy" placeholder="YY" name="" required>
-                              </div>
-                          </div>
-                        <div class="form-group mb-2">
-                          <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
-                          <input type="number" id="expiration" class="form-control form-control-sm" required="">
-                        </div>
-                </div>
-                  <div class="form-row  btn_confirm">
-                    <div class="col-12">
-                        <div class="botones-confirm"> 
-                          <button class="btn btn-room  btn-info" id="send" type="submit" > Confirm booking</button>
-                        </div>
-                          <div class="botones-confirm">
-                            <input class="btn btn-room btn-dark"  type="reset" value="Delete data">
-                          </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
+      <div id="payment">
+        <h1 class="complete">Complete the following form</h1>
+  <form id="form" class="container-fluid">
+    <div class="field col-4">
+      <label for="name"  class="form-label">name</label>
+      <input type="text" name="name" id="name"  class="form-control" required>
     </div>
+    <div class="field col-4">
+      <label for="last"  class="form-label">last</label>
+      <input type="text" name="last" id="last" class="form-control" required>
+    </div>
+    <div class="field col-4">
+      <label for="city"  class="form-label">city</label>
+      <input type="text" name="city" id="city" class="form-control" required>
+    </div>
+    <div class="field col-4">
+      <label for="phone" class="form-label">phone</label>
+      <input type="text" name="phone" id="phone" class="form-control" required>
+    </div>
+    <div class="field col-4">
+      <label for="email" class="form-label">email</label>
+      <input type="text" name="email" id="reply_to" class="form-control" required>
+    </div>
+
+  <div class="card_information">
+    <div class="col-12">
+      <h5 class="mb-4 payment-title">Payment information</h5>
+        <div class="form-row mb-2">
+            <div class="col lista-pagos">
+              <div>
+                <a class="nav-link" data-toggle="pill" href="#nav-tab-card">
+                <i class="fa fa-credit-card"></i> Credit Card</a>
+              </div>
+              <div>
+                <a class="nav-link" data-toggle="pill" href="#nav-tab-paypal">
+                <i class="fab fa-paypal"></i>Paypal</a>
+              </div>     
+                <div>
+                  <a class="nav-link" data-toggle="pill" href="#nav-tab-bank">
+                  <i class="fa fa-university icon"></i>Bank Transfer</a>
+                </div>
+            </div>
+              <div class="form-row mb-2">
+                  <div class="col">
+                    <label for="username">Full name (on the card)</label>
+                    <input type="text" class="form-control form-control-sm" name="username" id="username" required> 
+                  </div>
+              </div>
+                <div class="form-row mb-2">
+                  <label for="cardNumber">Card number</label>
+                  <div class="input-group">
+                  <input type="text" class="form-control form-control-sm" name="cardNumber" id="card-number" required>
+                  </div>
+                </div> 
+                  <div class="form-group mb-2">
+                    <label><span class="hidden-xs">Expiration</span> </label>
+                      <div class="input-group">
+                        <input type="number" class="form-control form-control-sm" id="mm" placeholder="MM" name="" required>
+                        <input type="number" class="form-control form-control-sm" id="yy" placeholder="YY" name="" required>
+                      </div>
+                  </div>
+                <div class="form-group mb-2">
+                  <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                  <input type="number" id="expiration" class="form-control form-control-sm" required="">
+                </div>
+        </div>
+          <div class="form-row  btn_confirm">
+            <div class="col-12">
+                <div class="botones-confirm"> 
+                  <input type="submit" id="button"  value="Send Information" >
+                </div>
+          </div>
+         </div>
+    </div>
+</form>
+</div>
+   <!-- emailjs -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    emailjs.init('DVTrO8yJVcqQQ9q3C')
+    </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./scripts/reserva.js"></script>
 </body>

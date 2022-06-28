@@ -4,38 +4,39 @@ let habitacion = [
 		id : 1,
 		nombre : "Standard",
 		precio : 40,
-		equipments : ['televisor','baño', 'wifi','refrigerador', 'electric kettle']
+		equipments : ['two separate beds','2 person', '11m²','bathroom with shower']
 	},
 	{
 		id : 2,
 		nombre : "double",
 		precio : 50,
-		equipments : ['televisor','baño', 'wifi','refrigerador', 'electric kettle','paseos a caballo','spa' ]
+		equipments : ['double bed','+ 1 extra bed', '2-3 person','16m²','paseos a caballo','spa' ]
 	},
 	{
 		id : 3,
-		nombre : "familiar",
+		nombre : "family",
 		precio : 60,
-		equipments : ['televisor','baño', 'wifi','refrigerador', 'electric kettle','paseos a caballo','spa','skii', 'pase gratis a actividades' ]
+		equipments : ['double bed','+ 3 extra bed', '22m²', 'paseos a caballo','spa','skii', 'pase gratis a actividades' ]
 	},
 	{
 		id : 4,
-		nombre : "suit",
+		nombre : "Big family",
 		precio : 90,
-		equipments : ['televisor','baño', 'wifi','refrigerador', 'electric kettle','vista panoramica','paseos a caballo','spa','skii', 'pase gratis a actividades', 'desayuno incluido' ]
+		equipments : ['2 double bed','single bed',' + 2 extra bed','31m²','vista panoramica','paseos a caballo','spa','skii', 'pase gratis a actividades', 'desayuno incluido' ]
 	},
 ]
-
+//mostrar datos en pantalla
 window.onload=function(){
-let datosCheckIn = localStorage.getItem("checkin")
-document.getElementById("check-in-datos").innerHTML = datosCheckIn;
-let datosCheckOut = localStorage.getItem("checkout")
-document.getElementById("check-out-datos").innerHTML = datosCheckOut;
-let diasTotal = localStorage.getItem("dateTotal")
-document.getElementById("dias-datos").innerHTML = diasTotal;
-let guest = localStorage.getItem("invitados")
-document.getElementById("guests").innerHTML = guest;
-};
+	let datosCheckIn = localStorage.getItem("checkin")
+	document.getElementById("check-in-datos").innerHTML = datosCheckIn;
+	let datosCheckOut = localStorage.getItem("checkout")
+	document.getElementById("check-out-datos").innerHTML = datosCheckOut;
+	let diasTotal = localStorage.getItem("dateTotal")
+	document.getElementById("dias-datos").innerHTML = diasTotal;
+	let guest = localStorage.getItem("invitados")
+	document.getElementById("guests").innerHTML = guest;
+	};
+
 
 // anime.js
 anime({
@@ -74,12 +75,25 @@ let i = 0
 };
 };
 
+//enviar los datos del formulario  con emailJS
+const btn = document.getElementById('button');
 
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
+   btn.value = 'Sending...';
 
+   const serviceID = 'default_service';
+   const templateID = 'template_6igvx0m';
 
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Information';
+	  swal('Sent!');;
+    }, (err) => {
+      btn.value = 'Send Information';
+      alert(JSON.stringify(err));
+    });
+});
 
-
-
-
-// window.onload=function(){
