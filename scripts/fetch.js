@@ -1,3 +1,4 @@
+
 //creo variable  que tendra los datos de la api
 let divPadre = document.getElementById('resultPerson');
 //leo la api
@@ -23,3 +24,22 @@ let divPadre = document.getElementById('resultPerson');
 			
 		});
 });
+
+// el siguiente codigo comentado es una ruta relativa me da error CORS request not HTTP
+
+let roomEquip = document.getElementById('roomEquipment');
+fetch('datos.json')
+.then((resp)=> resp.json())
+.then ( (data) => equipments(data))
+const equipments = data =>{
+data.forEach((producto) => {
+const listaEquipos = document.createElement('li')
+listaEquipos.innerHTML = `${producto.nombre} y ${producto.equipments}`
+
+roomEquip.append(listaEquipos)
+
+});
+};
+
+
+

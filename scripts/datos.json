@@ -3,25 +3,25 @@
 	{
 		"id" : "1",
 		"nombre ": "Standard",
-		"precio" : "40,",
-		"equipments" : "{'two separate beds','2 person', '11m²','bathroom with shower'}"
+		"precio" : 40,
+		"equipments" : "'two separate beds','2 person', '11m²','bathroom with shower'"
 	},
 	{
 		"id" : "2",
 		"nombre" : "double",
-		"precio" :" 50",
-		"equipments" : "{'double bed','+ 1 extra bed', '2-3 person','16m²','paseos a caballo','spa' }"
+		"precio" : 50,
+		"equipments" : "'double bed','+ 1 extra bed', '2-3 person','16m²','paseos a caballo','spa'"
 	},
 	{
 		"id" :" 3",
 		"nombre" : "family",
 		"precio ": 60,
-		"equipments" : "{'double bed','+ 3 extra bed', '22m²', 'paseos a caballo','spa','skii', 'pase gratis a actividades'}"
+		"equipments" : "'double bed','+ 3 extra bed', '22m²', 'paseos a caballo','spa','skii', 'pase gratis a actividades'"
 	},
 	{
 		"id" : "4",
 		"nombre" : "Big family",
-		"precio " : ": 90",
-		"equipments": "{'2 double bed','single bed',' + 2 extra bed','31m²','vista panoramica','paseos a caballo','spa','skii', 'pase gratis a actividades', 'desayuno incluido' }"
+		"precio " :  90,
+		"equipments": "'2 double bed','single bed',' + 2 extra bed','31m²','vista panoramica','paseos a caballo','spa','skii', 'pase gratis a actividades', 'desayuno incluido'"
 	}
 ]
