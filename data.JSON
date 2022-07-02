@@ -1,0 +1,20 @@
+[
+	{
+		"nombre" : "Standard",
+		"precio ": 40
+	},
+	{
+		
+		"nombre" : "double",
+		"precio " : 50
+	},
+	{
+		"nombre": "family",
+		"precio ": 60
+	},
+	{
+		
+		"nombre" : "Big family",
+		"precio " : 90
+	}
+]
