@@ -4,25 +4,21 @@ let habitacion = [
 		id : 1,
 		nombre : "Standard",
 		precio : 40,
-		equipments : ['two separate beds','2 person', '11m²','bathroom with shower']
 	},
 	{
 		id : 2,
 		nombre : "double",
 		precio : 50,
-		equipments : ['double bed','+ 1 extra bed', '2-3 person','16m²','paseos a caballo','spa' ]
 	},
 	{
 		id : 3,
 		nombre : "family",
 		precio : 60,
-		equipments : ['double bed','+ 3 extra bed', '22m²', 'paseos a caballo','spa','skii', 'pase gratis a actividades' ]
 	},
 	{
 		id : 4,
 		nombre : "Big family",
 		precio : 90,
-		equipments : ['2 double bed','single bed',' + 2 extra bed','31m²','vista panoramica','paseos a caballo','spa','skii', 'pase gratis a actividades', 'desayuno incluido' ]
 	},
 ]
 //mostrar datos en pantalla
@@ -96,4 +92,19 @@ document.getElementById('form')
       alert(JSON.stringify(err));
     });
 });
+
+let datosForm = document.getElementById('agregarDatos')
+let URL = 'https://coder30350-default-rtdb.firebaseio.com/'
+datosForm.addEventListener('submit', (e) =>{
+e.preventDefault
+fetch(URL + `formulario.json`,{
+method: 'POST',
+body: JSON.stringify({name:'standard'}),
+headers:{'Content-Type': 'application/json;charset=UTF-8'}
+})
+.then((res) => {res.json()})
+.then((data) => {console.log(data)})
+})
+
+
 
