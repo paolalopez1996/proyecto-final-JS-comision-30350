@@ -68,6 +68,26 @@ document.getElementById('payment').style.display = 'block'
 };
 };
 
+//----//
+//enviar los datos del formulario  usando EMAILJS
+const btn = document.getElementById('button');
+document.getElementById('form')
+.addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_6igvx0m';
+
+    emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Information';
+	  swal('Sent!');;
+    }, (err) => {
+      btn.value = 'Send Information';
+      alert(JSON.stringify(err));
+    });
+});
 
 
