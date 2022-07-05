@@ -1,15 +1,12 @@
 
 Date.prototype.isValid = function () {
-	// If the date object is invalid it
-	// will return 'NaN' on getTime()
-	// and NaN is never equal to itself.
-	return this.getTime() === this.getTime()
+return this.getTime() === this.getTime()
 }
 document.addEventListener(
 "DOMContentLoaded",
 
 function () {
-/*variables del DOM*/
+/*capturando datos*/
 	let fechaIni = document.getElementById("timeStart")
 	let fechaFin = document.getElementById("timeEnd")
 	let diasDesc = document.getElementById("daysDiscount")

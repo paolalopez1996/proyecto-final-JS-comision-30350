@@ -25,6 +25,7 @@ let divPadre = document.getElementById('resultPerson');
 
 //----//
 //JSON local "equipments"
+const html = "";
 let roomEquip = document.getElementById('roomEquipment');
 fetch('data.JSON')
   .then(function (resp) {
@@ -34,7 +35,7 @@ fetch('data.JSON')
     return data.json();
   })
   .then(function (Normal) {
-    const html = Normal.map(
+    html = Normal.map(
       (data) => {
 	  const listaEquipos = document.createElement('div')
 	  listaEquipos.innerHTML += `<div class="container accordion accordion-flush" id="accordionFlushExample">
@@ -64,7 +65,7 @@ fetch('data.JSON')
 //enviar los datos del formulario  usando EMAILJS
 const btn = document.getElementById('button');
 document.getElementById('form')
-.addEventListener('submit', function(event) {
+btn.addEventListener('submit', function(event) {
     event.preventDefault();
 
     btn.value = 'Sending...';
