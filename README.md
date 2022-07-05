@@ -2,7 +2,7 @@ nombre del proyecto: HOTEL LASKA.
 
 Proyecto final para el curso de javascript CoderHouse. comision 30350.
 
-contenido: reservación de cabañas de un hotel, para el curso de Javascript .
+contenido: reservación de cabañas de un hotel.
 
 ¿que hace?
 tomo datos del usuario: fecha de ingreso, fecha de salida y numero de invitados.
