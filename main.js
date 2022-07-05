@@ -5,15 +5,11 @@ Date.prototype.isValid = function () {
 	// and NaN is never equal to itself.
 	return this.getTime() === this.getTime()
 }
-	
-
 document.addEventListener(
+"DOMContentLoaded",
 
-	"DOMContentLoaded",
-
-
-	function () {
-	/*variables del DOM*/
+function () {
+/*variables del DOM*/
 	let fechaIni = document.getElementById("timeStart")
 	let fechaFin = document.getElementById("timeEnd")
 	let diasDesc = document.getElementById("daysDiscount")
@@ -21,21 +17,22 @@ document.addEventListener(
 	const boton = document.getElementById('boton');
     diasDesc.disabled = true;
 
-	//anime.js
+//usando anime.js
 	anime({
-		targets: '.welcome',
-		width: '60%', 
-	   easing:'linear',
-	   direction: 'alternate',
-	   scale: 1,
-	   loop: 3
-	  });
+	targets: '.welcome',
+	width: '60%', 
+	easing:'linear',
+	direction: 'alternate',
+	scale: 1,
+	loop: 3
+	});
 
-	//capturar numero de pasajeros
-        function obtenerInvitados() {
-			pasajeroTotal = document.getElementById("invitados");
-			localStorage.setItem("invitados", pasajeroTotal.value)
-			}
+//comienzo de reserva
+//capturar numero de pasajeros
+    function obtenerInvitados() {
+		pasajeroTotal = document.getElementById("invitados");
+		localStorage.setItem("invitados", pasajeroTotal.value)
+		}
 	/*OBTENER FECHAS*/
 		fechaIni.addEventListener("change", () => {
 			fechaFin.value !== undefined ?  calculardiasDiscount() : console.log("undefined");
@@ -70,58 +67,8 @@ document.addEventListener(
 		}else{
 		window.location.href = "reserva.html"
 		}	
-	
 	})
-	
-//creo variable  que tendra los datos de la api
-let divPadre = document.getElementById('resultPerson');
-//leo la api
-	fetch('https://randomuser.me/api/?results=3&nat=AU,BR,CA')
-	  .then(response => response.json()) // como fetch me devuelve un objeto Response, tengo que decir que el cuerpo de lo devuelva como JSON
-	  .then(user => {
-		user.results.forEach(person => {
-			const div = document.createElement('div') //creo un elemento
-            divPadre.append(div)
-		//muestro los usuarios
-		div.innerHTML = ` <div class="col card-contenido">
-			<div class="card">
-			<div class="card-body">
-			  <img src="${person.picture.large}" class="card-img-top" alt="...">
-			  <h5 class="card-title">${person.name.first}, ${person.name.last}</h5>
-			  <small>${person.location.city}, ${person.location.country}</small>
-				 <br>
-	          <span class="card-star"><span><i class="fa fa-star" aria-hidden="true"></i></span><span><i class="fa fa-star" aria-hidden="true"></i></span><span><i class="fa fa-star" aria-hidden="true"></i></span><span><i class="fa fa-star" aria-hidden="true"></i></span><span><i class="fa fa-star" aria-hidden="true"></i></span></span>
-			  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			</div>
-		  </div>
-		</div>`
-			
-		});
-});
 
-
-// el siguiente codigo  me da error CORS request not HTTP al intentar llamar un jsonlocal
-
-fetch("data.JSON")
-.then((res) => {res.json()})
-.then((data) => {console.log(data)})
-
-// let roomEquip = document.getElementById('roomEquipment');
-// fetch( 'datos.json')
-// .then((resp)=> resp.json())
-// .then ( (data) => console.log(data))
-// const equipments = data =>{
-// data.forEach((producto) => {
-// const listaEquipos = document.createElement('li')
-// listaEquipos.innerHTML = `${producto.nombre} y ${producto.equipments}`
-
-// roomEquip.append(listaEquipos)
-
-// });
-// };
-	},
+    },
 	false
-)
-
-
-
+)	

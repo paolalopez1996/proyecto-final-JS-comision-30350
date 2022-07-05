@@ -18,7 +18,7 @@
     <!-- sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- estilos -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     
 </head>
 <body>
@@ -53,38 +53,38 @@
       </header>
     </div>
     
-        <div class="resultado container">
+        <div class="resultado container-fluid">
           <div class="row info">
             <div class="col-12 infocol">
+              <div>
+                <br>
+                <br>
               <h2>Check in:</h2>
               <p id="check-in-datos" ></p> 
+              <br>
               <h2>Check out:</h2>
               <p id="check-out-datos" ></p>
+              <br>
               <h2>Days:</h2>
               <p id="dias-datos"></p>
+            </div>
+            <div>
               <h2>Guests</h2>
               <p id="guests"></p>
+              <br>
               <h2>Your room:</h2>
               <p id="hab-nombre"></p>
+            </div>
               <p id="respuesta"></p>
-             
               <button id="botonBook" onclick="continuarReservacion()" type="button"  class="btn btn-success reservar"><a href="#form">Continue to book</a></button> 
             </div>
           </div>
         </div>
-        <div>
-          <form action="" id="agregarDatos">
-            <label for="">datos</label>
-          <input type="text">
-          <button type="submit" id="botonDatos">hola</button>
-          </form>
-          
-
-        </div>
+        
     <div class="titulo-elige">
         <h1>SELECT YOUR COTTAGE</h1>
-        <small>the price includes all the benefits of the main cottage including breakfast or half board in a restaurant, wellness and other ilimitaded offered services </small>
     </div>
+      
       <div class="cabañaspadre container-fluid">
         <div class="hab-basica row primera-fila">
           <div class="col-6 col-sm-6 hab">
@@ -201,5 +201,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./scripts/reserva.js" ></script>
 <script src="./main.js"></script>
+<script src="./scripts/fetch.js"></script>
+
+
 </body> 
 </html>

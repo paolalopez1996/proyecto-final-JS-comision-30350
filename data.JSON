@@ -1,20 +1,24 @@
 [
 	{
 		"nombre" : "Standard",
-		"precio ": 40
+		"equipments": ["2 person", "two separate beds", "15m²"],
+		"services": ["free spa", "free Skiing", "3 breakfast buffet"]
 	},
+
 	{
-		
 		"nombre" : "double",
-		"precio " : 50
+		"equipments": ["2-3 person","double bed + extra bed",  "20m²"],
+		"services" : ["free spa",  "free skiing", "5 breakfast buffet"]
 	},
+
 	{
 		"nombre": "family",
-		"precio ": 60
+		"equipments": [ "3-5 person", "double bed + 3 extra beds",  "25m²",  " free skii", "free spa", "daycare"],
+		"services": ["free spa",  "free skiing", "daycare","breakfast buffet"]
 	},
 	{
-		
 		"nombre" : "Big family",
-		"precio " : 90
+		"equipments": ["8 person max","double bed + 3 single bed + 3 extra beds", "45m²"],
+	    "services" : ["free spa",  "free skiing", "daycare","breakfast buffet"]
 	}
 ]

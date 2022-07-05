@@ -1,0 +1,87 @@
+/*RESPONSIVE INDEX*/
+@media screen and (max-width:900px){
+  .principalhijo{
+    width: 100%;
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width:880px){
+    .principalhijo{
+    width: 100%;
+    padding-left: 1rem;
+    }
+    .welcome{ 
+      height: 9rem;
+      h1{
+      font-size: 30px;
+    }
+  }
+  }
+    @media screen and (max-width:620px){
+      .principalhijo{
+      padding-left: 2rem;
+      text-align: center;
+      width: 100%;
+      } 
+      #respuesta{
+        font-size: 30px;
+    }
+  }
+    @media screen and (max-width:420px){
+  .welcome{
+      height: 6rem;
+      h1{
+        font-size: 20px;
+      }
+  }
+  }
+  /*resposive rooms-----------*/
+  @media screen and (max-width:980px){
+    .room-image{
+      margin-top: 80px;
+    }
+    }
+    @media screen and (max-width:360px){
+      .room-image{
+        margin-top: 80px;
+      }
+      .room-image img{
+        width: 300px;
+        height: 300px;
+      }
+      }
+      @media screen and (max-width:300px){
+        .room-image {
+          img{
+          width: 250px;
+          height: 250px;
+        }
+      }
+        }
+
+        /*responsive footer*/
+@media screen and (max-width:600px){
+    .footer{
+      flex-direction: column;
+    }    }
+    @media screen and (max-width:900px){
+      .aboutus .contactfooter .menufooter{
+       margin-top: 20px;
+       padding: 15rem;
+       border: 2px solid black;
+      }   
+      .menufooter .contactfooter .aboutus{
+        padding: 10px;
+        margin-top: 20rem;
+      }
+      .iconos{
+        padding-bottom: 4rem;
+      }
+     
+    }
+    @media screen  and (min-width: 730px) and (max-width:983px){
+      .aboutus p{
+        width: 90%;
+        padding-left: 9rem;
+      }
+    }

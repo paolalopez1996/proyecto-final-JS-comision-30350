@@ -1,0 +1,159 @@
+/*RESERVA.HTML*/
+.contenedornavbar_reserva{
+    background-image: url(../assets/imagenes/navreserve.jpg);
+    background-position: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30rem;
+}
+.cabañaspadre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    font-family: 'Raleway', sans-serif;
+}
+.hab{
+    margin-top: 12px;
+    margin-bottom: 8rem;
+    padding: 2rem;
+}
+.hab {h1{
+    background-color: #d6ddde;
+    color: rgb(55, 51, 51);}
+}
+.img-cabañas{
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+}
+.primera-fila{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+     } 
+     .segunda-fila{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+       } 
+     .boton-book{
+      color: white;
+     }
+     .resultado{
+      color: black;
+      font-weight: 900;
+      font-family: 'Raleway', sans-serif;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 25px;
+      font-weight: 800;
+      padding: 12px;
+    }
+.infocol{
+    background-color: #e4ebec;
+    border-radius: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 12px;
+    p{
+        color: purple;
+        border: 2px solid black dotted;
+        text-align: center;
+    }
+        h2{
+            background-color: #90E0EF;;
+        }
+    }
+    #botonBook{
+    background-color: #90E0EF;;
+    text-align: center;
+    font-weight: 500;
+    border: 2px solid black;
+  } 
+     #respuesta{
+      font-family: 'Raleway', sans-serif;
+      margin: 20px;
+      width: 100%;
+      font-size: 50px;
+      color: green;
+      }
+  
+      /*FORMULARIO DE PAGO*/
+      #form{
+        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .titulo-elige{
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+        text-transform: lowercase;
+        text-shadow:  1px 1px 2px black;
+        padding: 15px;
+        font-style: italic;
+      }
+     small{
+      color: gray;
+     }
+      #emailHelp{
+        font-size: 10px;
+      }
+     .lista-pagos{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: space-evenly;
+     }
+     .payment-title{
+      text-align: center;
+      font-size: 20px;
+      padding: 8px;
+      margin-top: 1rem;
+      height: 5rem;
+      width: 100%;
+     }
+     .form_payment{
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+      width: 100%;
+      color: #00B4D8;
+     }
+     .card_information{
+      display: flex;
+      justify-content:center;
+     }
+      .btn_confirm{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 8rem;
+      width: 100%;
+      text-align: center;
+     } 
+     #button{
+      background-color: #00B4D8;
+      padding: 5px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+     }
+      #payment{
+      display: none;
+     } 
+    

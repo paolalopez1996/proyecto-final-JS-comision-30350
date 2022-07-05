@@ -1,0 +1,51 @@
+/*FOOTER--------------------------------------------*/
+.footer{
+  margin-top: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url(../assets/imagenes/footer.jpg);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  padding-top: 5rem;
+  color: white;
+}
+.footer h2{
+  height: 4rem;
+  color: #CAF0F8;
+  font-weight: bold;
+  font-size: 35px;
+}
+.aboutus .contactfooter .menufooter{
+  padding: 20px;
+  height: 20rem;
+  }
+.aboutus p{
+  font-size: 20px;
+  text-align: justify;
+  }
+.menufooter li a{
+  font-size: 30px;
+  text-decoration: none;
+  color: #CAF0F8;
+}
+.menufooter li a:hover{
+  animation: flash;
+  animation-duration: 1s;
+  color: #00B4D8;
+}
+.iconos img{
+  width:40px ;
+  height: 40px;
+  margin-right: 12px;
+}
+.contactfooter p a{
+  color: #CAF0F8;
+}
+.copyright{
+  text-align: center;
+}

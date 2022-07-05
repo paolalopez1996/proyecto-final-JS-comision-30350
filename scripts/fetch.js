@@ -1,13 +1,11 @@
-
-//creo variable  que tendra los datos de la api
+//index section "users calification"
 let divPadre = document.getElementById('resultPerson');
-//leo la api
 	fetch('https://randomuser.me/api/?results=3&nat=AU,BR,CA')
-	  .then(response => response.json()) // como fetch me devuelve un objeto Response, tengo que decir que el cuerpo de lo devuelva como JSON
+	  .then(response => response.json()) // lo devuelvo como JSON
 	  .then(user => {
 		user.results.forEach(person => {
 			const div = document.createElement('div') //creo un elemento
-            divPadre.append(div)
+			divPadre.append(div)
 		//muestro los usuarios
 		div.innerHTML = ` <div class="col card-contenido">
 			<div class="card">
@@ -21,25 +19,65 @@ let divPadre = document.getElementById('resultPerson');
 			</div>
 		  </div>
 		</div>`
-			
+		
 		});
 });
 
-// el siguiente codigo comentado es una ruta relativa me da error CORS request not HTTP
-
+//----//
+//JSON local "equipments"
 let roomEquip = document.getElementById('roomEquipment');
-fetch('datos.json')
-.then((resp)=> resp.json())
-.then ( (data) => equipments(data))
-const equipments = data =>{
-data.forEach((producto) => {
-const listaEquipos = document.createElement('li')
-listaEquipos.innerHTML = `${producto.nombre} y ${producto.equipments}`
+fetch('data.JSON')
+  .then(function (resp) {
+    return resp;
+  })
+  .then(function (data) {
+    return data.json();
+  })
+  .then(function (Normal) {
+    const html = Normal.map(
+      (data) => {
+	  const listaEquipos = document.createElement('div')
+	  listaEquipos.innerHTML += `<div class="container accordion accordion-flush" id="accordionFlushExample">
+	  <div class="accordion-item">
+		<h2 class="accordion-header" id="flush-headingOne">
+		  <button class="accordion-button center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+			${data.nombre}
+		  </button>
+		</h2>
+		<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+		  <div class="accordion-body services-body">${data.equipments[0]} <i class="fa-solid fa-people-robbery"></i></div>
+          <div class="accordion-body">${data.equipments[1]}  <i class="fa-solid fa-bed"></i></div>
+          <div class="accordion-body">${data.equipments[2]} <i class="fa-solid fa-house-chimney-window"></i></div>
+          <div class="accordion-body ">${data.services} <i class="fa-solid fa-person-skiing"></i></div>
+		</div>
+	  </div>
+	</div>
+	 `
+	roomEquip.append(listaEquipos)
+	   });
+  })
+  .catch(function (err) {
+    console.log("Fetch problem show: " + err.message);
+  });
 
-roomEquip.append(listaEquipos)
+//----//
+//enviar los datos del formulario  usando EMAILJS
+const btn = document.getElementById('button');
+document.getElementById('form')
+.addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_6igvx0m';
+
+    emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Information';
+	  swal('Sent!');;
+    }, (err) => {
+      btn.value = 'Send Information';
+      alert(JSON.stringify(err));
+    });
 });
-};
-
-
-

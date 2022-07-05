@@ -12,17 +12,13 @@
     <!-- animate.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <!-- estilos -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/68f6372bfa.js" crossorigin="anonymous"></script>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- scripts -->
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
 </head>
 <body class="bg-image">
   <div class="contenedornavbar">
@@ -54,12 +50,11 @@
         </div>
       </nav>
   </header>
-      <div class="container welcome">
+      <div class="container-fluid welcome">
         <div class="row align-items-center">
           <div class="col-12" id="welcomeInfo">
             <h4>WELCOME TO</h4>
             <h1 class="titulo">LÁSKA HOTEL</h1>
-            <p id="laskatitulo"></p>
           </div>
         </div>
       </div>
@@ -68,14 +63,15 @@
       <h1 class="formulario__titulo"> make your reservation </h1>
       <form action="" id="formulario" >
           <div class="row inputs" id="inputs">
-            <div class="col-xl-4 col-sm-6">
+            <div class="col-xl-4 col-sm-6 form-label">
               <label>Check-in</label>
               <input type="date" id="timeStart" class="form-control fechas" >
               <label>Check-Out</label>
               <input type="date" id="timeEnd" class="form-control fechas" >
               <label for="daysDiscount">Days</label>
               <input type="text" id="daysDiscount" class="form-control fechas" >
-              <label for="invitados" class="formulario__label">guests</label>
+              <label for="invitados" class="formulario__label">guests<small class="small">(check the room equipments before booking to know the capacity of each cottage)</small>
+              </label>
                 <select class="form-select" id="invitados" name="invitados" aria-label="Default select example">
                   <option selected>Open this select menu</option>
                   <option value="1">1</option>
@@ -88,11 +84,17 @@
                   <option value="8">8</option>
                 </select>
                   <div class="col-xl-2 col-sm-3  boton__formulario"> 
-                    <a href=""><button class="btn btn-dark formulario__submit" value="click" type="submit"  id="boton" >INFO</button></a>
+                    <a href=""><button class="btn btn-dark formulario__submit" value="click" type="submit"  id="boton" >book</button></a>
                   </div> 
             </div>    
           </div>
       </form>
+  </div>
+    <!-- interactuando con DOM -->
+    <div id="roomEquipment">
+      <h1 class="tituloEquipments">ROOM EQUIPMENTS</h1>
+      <small>click below to know more about cottages equipments </small>
+      <i class="fa-thin fa-bed-empty"></i>
   </div>
     <!-- <p id="datos_guardados"></p> -->
     <div class="container-fluid textoprincipal">
@@ -185,10 +187,7 @@
             </div>
           </section>
             
-            <!-- interactuando con DOM -->
-    <ul id="roomEquipment">
-        <h1 class="tituloEquipments">ROOM EQUIPMENTS</h1>
-    </ul>
+       
   <footer class="container-fluid footer">
       <div class="row">
           <div class="col-lg-4 col-xs-12 aboutus">
@@ -236,7 +235,9 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./main.js"  ></script>
+  <script src="./main.js" ></script>
+  <script src="./scripts/fetch.js"></script>
+
 
 </body>
 </html>

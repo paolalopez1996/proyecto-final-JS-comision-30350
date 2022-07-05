@@ -1,0 +1,66 @@
+.contenedornavbar{
+    background-image: url(../assets/imagenes/ark-shelter-shelters-for-hotel-bjornson-boysplaynice-38-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 42rem;
+    }
+    .contenedornavbar a:hover{
+      animation: flash;
+      animation-duration: 1s;
+    }
+    .navbar{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+    .header {
+      .navbar {
+          a{
+      color: blue;
+    }
+  }
+    }
+    .text-center{
+      text-align: center !important;
+    }
+    .navbar-brand {
+      img{
+      width: 70px;
+      height: 80px;
+      border-radius: 10%;
+  }
+    }
+    .nav-item{
+      margin-right: 5rem;
+    }
+    .sticky-top{
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+    }
+    .a:visited{
+      background-color: transparent;
+      color: white;
+    }
+    .bg-color{
+      position: sticky;
+      top: 0;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 900;
+      background-color: #90E0EF; 
+      color: white;
+      background: linear-gradient(rgba(225, 227, 232, 0.75), rgba(225, 227, 232, 0.75));
+      font-size: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .logo{
+      display: inline-block;
+      vertical-align: top;
+    }
